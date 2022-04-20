@@ -1,37 +1,37 @@
-## Welcome to GitHub Pages
+## Oh, hi you there! 👋
 
-You can use the [editor on GitHub](https://github.com/CrissNamon/crissnamon.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+<p>My name is Danila, I'm from Krasnodar, Russia.</p>
+I'm a Junior Java/Kotlin Developer interested in backend and game development.
+I don't have a commercial experience, but I work on my own projects.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Contact me
+📧 Email: [danilarassokhin@gmail.com](mailto:danilarassokhin@gmail.com)
+<br>💻 GitHub: [CrissNamon](https://github.com/CrissNamon)
+<br>📑 LinkedIn [Danila Rassokhin](https://www.linkedin.com/in/danilarassokhin/)
+<br>📱 Telegram: [@RassokhinD](https://t.me/RassokhinD)
 
-### Markdown
+## My projects
+- [Progressive](https://github.com/CrissNamon/progressive)
+    > Open source java game framework with usefull tools to create game logic easily. Progressive provides IoC/DI container with auto injection through annotations, state management, game objects, game scripts and much more
+- [RUVIK](https://github.com/CrissNamon/ruvik-server)
+    > Server for android messenger RUVIK with custom end-to-end encryption protocol. Spring Boot + STOMP over WebSocket
+- [SOLDEEA](https://github.com/CrissNamon/soldeea)
+    > Symmetric encryption algorithm based on diophantine equations with java implementation
+- [RUVIK Proto](https://github.com/CrissNamon/ruvik-proto-java)
+    > Custom end-to-end encryption protocol with java implementation
+    
+All projects available on my [GitHub](https://github.com/CrissNamon)
+    
+<img src="https://github-readme-stats.vercel.app/api?username=crissnamon&title_color=0074D9&text_color=E5C07B&icon_color=2ECC40&border_color=30363D&bg_color=161B22&show_icons=true&cache_seconds=1800&locale=en&border_radius=5&hide=,issues,&count_private=true&include_all_commit=true"/>
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+## Scientific activity
+ORCID: [0000-0002-8835-0376](https://orcid.org/0000-0002-8835-0376)
+- "Diophantine models for end-to-end encryption"
+    > Article for all-Russian conference "Applied Mathematics: Modern Problems of Mathematics, Informatics and Modeling" in Kuban State University in april 2020. Included in [Russian Science Citation Index](https://www.elibrary.ru/item.asp?id=46415961)
+- "Two-factor biometric authentication system"
+    > Designed service and protocol for two-factor authentication using biometric data. Published in the ["Caspian Journal"](https://www.elibrary.ru/item.asp?id=47395217) which is recommended by the Higher Attestation Commission of Russia. 
 
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/CrissNamon/crissnamon.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## About me
+<p>I started my developer way in 2017, when I enrolled in Samsung's IT school for Android developers. Nowadays I'm on my way to backend development with Java and Spring.</p>
+<p>I practice my skills and learn new things working on some pet projects. I have them a lot already, but I always find something new and interesting to study.</p>
+<p>In my free time I study game development and work on my own game now 🙂</p>
