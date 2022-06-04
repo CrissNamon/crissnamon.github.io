@@ -1,6 +1,8 @@
 ---
 layout: post
 title:  "Hello, World!"
+lang: ru
+lang-ref: hello-world
 ---
 
 # Welcome | Привет 👋
