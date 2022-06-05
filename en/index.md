@@ -1,14 +1,11 @@
+---
+lang:  en
+---
 ## Oh, hi you there! 👋
 
 <p>My name is Danila, I'm from Krasnodar, Russia.</p>
 I'm a Junior Java/Kotlin Developer interested in backend and game development.
 I don't have a commercial experience, but I work on my own projects.
-
-## Contact me
-📧 Email: [danilarassokhin@gmail.com](mailto:danilarassokhin@gmail.com)
-<br>💻 GitHub: [CrissNamon](https://github.com/CrissNamon)
-<br>📑 LinkedIn [Danila Rassokhin](https://www.linkedin.com/in/danilarassokhin/)
-<br>📱 Telegram: [@RassokhinD](https://t.me/RassokhinD)
 
 ## My projects
 - [Progressive](https://github.com/CrissNamon/progressive)

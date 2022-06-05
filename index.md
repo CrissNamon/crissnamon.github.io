@@ -1,3 +1,8 @@
+---
+lang:  en
+---
+### Hi! My site is available in different languages.
+### Привет! Мой сайт доступен на разных языках.
 <ul class="languages">
 {% for lang in site.data.languages %}
 {% assign language = lang[1] %}

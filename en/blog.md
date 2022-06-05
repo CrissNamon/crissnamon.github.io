@@ -1,8 +1,14 @@
+---
+lang: en
+---
 # Blog
-<ul>
-  {% for post in site.posts  | where:"lang", page.lang %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-    </li>
+{% assign posts = site.posts | where:"lang", page.lang %}
+  {% for post in posts %}
+### [{{ post.title }}]({{ post.url }})
+#### {{ post.date }}
+___
+{{ post.excerpt }}
+<br>
+[Read >>>]({{ post.url }})
+<br>
   {% endfor %}
-</ul>
