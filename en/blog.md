@@ -8,7 +8,6 @@ lang: en
 #### {{ post.date }}
 ___
 {{ post.excerpt }}
-<br>
 [Read >>>]({{ post.url }})
 <br>
   {% endfor %}

@@ -8,7 +8,6 @@ lang: ru
 #### {{ post.date }}
 ___
 {{ post.excerpt }}
-<br>
 [Читать >>>]({{ post.url }})
 <br>
   {% endfor %}
