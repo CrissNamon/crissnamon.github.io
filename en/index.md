@@ -4,8 +4,8 @@ lang:  en
 ## Oh, hi you there! 👋
 
 ## My projects
-- [Compaj](https://github.com/CrissNamon/compaj-cloud)
-    > Open-source programming and numeric computing platform for math modeling and visualization with fully functional programming language. Includes desktop application and cloud service.
+- [CompaJ](https://github.com/CrissNamon/compaj-cloud)
+    > Open-source programming and numeric computing platform for math modeling and visualization with fully functional programming language. Includes desktop application and cloud service
 - [Progressive](https://github.com/CrissNamon/progressive)
     > Open source java game framework with usefull tools to create game logic easily. Progressive provides IoC/DI container with auto injection through annotations, state management, game objects, game scripts and much more
 - [SOLDEEA](https://github.com/CrissNamon/soldeea)
