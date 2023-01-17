@@ -3,7 +3,7 @@ layout: post
 title:  "Уведомления со Spring WebFlux и SSE"
 lang: ru
 lang-ref: notifications-with-spring-webflux-and-sse
-date: 2023-01-18 20:00
+date: 2023-01-17 20:00
 ---
 
 Иногда может возникнуть необходимость отправлять пользователю данные в реальном времени, например уведомления на Frontend приложении. Для этого можно использовать следующий простой способ с использованием Flux из Project Reactor и ServerSentEvents из Spring.

@@ -3,7 +3,7 @@ layout: post
 title:  "Notifications with Spring Boot and SSE"
 lang: en
 lang-ref: notifications-with-spring-webflux-and-sse
-date: 2023-01-18 20:00
+date: 2023-01-17 20:00
 ---
 
 Sometimes it may be necessary to send real-time data to the user, such as notifications in the Frontend application. To do this, you can use the following simple method using Flux from Project Reactor and ServerSentEvents from Spring.
