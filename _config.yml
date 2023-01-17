@@ -2,7 +2,7 @@ theme: jekyll-theme-minimal
 title: Danila Rassokhin
 author: Danila Rassokhin
 description: My personal web page
-logo: https://avatars.githubusercontent.com/u/111862432?s=200&v=4
+logo: https://avatars.githubusercontent.com/u/22001123?v=4
 paginate: 5
 paginate_path: "/blog/page:num/"
 excerpt_separator: <!--more-->

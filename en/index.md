@@ -13,7 +13,7 @@ lang:  en
 - [RUVIK Proto](https://github.com/CrissNamon/ruvik-proto-java)
     > Custom end-to-end encryption protocol with java implementation
     
-All these and other projects available on my personal GitHub [@CrissNamon](https://github.com/CrissNamon) or in organization account [@HiddenPrj](https://github.com/HiddenPrj).
+All these and other projects available on my personal GitHub [@CrissNamon](https://github.com/CrissNamon).
     
 <img src="https://github-readme-stats.vercel.app/api?username=crissnamon&title_color=0074D9&text_color=E5C07B&icon_color=2ECC40&border_color=30363D&bg_color=161B22&show_icons=true&cache_seconds=1800&locale=en&border_radius=5&hide=,issues,&count_private=true&include_all_commit=true"/>
 
