@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "Уведомления со Spring WebFlux и SSE"
+title:  "Уведомления на Spring WebFlux и SSE"
 lang: ru
-lang-ref: notifications-with-spring-webflux-and-sse
-date: 2023-01-17 20:00
+lang-ref: spring-webflux-sse
+date: 2023-01-17 08:00
 ---
 
 Иногда может возникнуть необходимость отправлять пользователю данные в реальном времени, например уведомления на Frontend приложении. Для этого можно использовать следующий простой способ с использованием Flux из Project Reactor и ServerSentEvents из Spring.
+<!--more-->
 
 Для начала необходимо создать класс для хранения уведомления. Для простоты у него будут только два поля: id и message.
 
@@ -27,7 +28,9 @@ public class Notification {
 }
 ```
 
-Далее создадим сервис, который будет управлять подписками и уведомлениями. Определять, кому принадлежит уведомление будем по id пользователя. Будем генерировать случайный id для каждого уведомления. Ограничим наш Random в промежутке [0, 3].
+Далее создадим сервис, который будет управлять подписками и уведомлениями. Определять, кому принадлежит уведомление будем по id пользователя. 
+
+Будем генерировать случайный id для каждого уведомления. Ограничим наш Random в промежутке [0, 3].
 ```java
 private Integer generateId() {
 	return RANDOM.nextInt(4);
@@ -56,7 +59,9 @@ private void generateNotifications(FluxSink<ServerSentEvent<Notification>> sink)
 }
 ```
 
-Если мы начнем отправлять уведомления сразу из генератора, то можем столкнуться с проблемой таймаута и разрывом соединения. Сейчас уведомления создаются раз в 2 секунды, но в реальной системе уведомления могут создаваться минуты и даже часы. Если в течение определенного времени (обычно пары минут) в открытое соединение не будет отправлено никаких данных, то оно автоматически закроется. Чтобы избежать этого, создадим heartbeat - дополнительный поток из пустых комментариев, которые будут отправляться в открытое соединения, чтобы поддерживать его открытым. О его закрытии позаботится сам Spring и закроет наш heartbeat автоматически.
+Если мы начнем отправлять уведомления сразу из генератора, то можем столкнуться с проблемой таймаута и разрывом соединения. Сейчас уведомления создаются раз в 2 секунды, но в реальной системе уведомления могут создаваться минуты и даже часы. Если в течение определенного времени (обычно пары минут) в открытое соединение не будет отправлено никаких данных, то оно автоматически закроется. 
+
+Чтобы избежать этого, создадим heartbeat - дополнительный поток из пустых комментариев, которые будут отправляться в открытое соединения, чтобы поддерживать его открытым. О его закрытии позаботится сам Spring и закроет наш heartbeat автоматически.
 
 ```java
 private <T> Flux keepAlive(Duration duration, Flux<T> data, Integer id) {
@@ -102,7 +107,7 @@ public class NotificationController {
     this.notificationService = notificationService;
   }
 
-  @GetMapping("/subscribe/{id}")
+  @GetMapping(value = "/subscribe/{id}", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
   public Flux<ServerSentEvent<Notification>> subscribe(@PathVariable Integer id) {
     return notificationService.subscribe(id);
   }
@@ -138,4 +143,29 @@ Sent for 3
 Notification flux closed
 ```
 
-Получать уведомления на Frontend приложении можно с помощью встроенных средств JavaScript или с помощью сторонних библиотек. Я использую [sse.js](https://github.com/mpetazzoni/sse.js)
+Получать уведомления на Frontend приложении можно с помощью встроенных средств JavaScript или с помощью сторонних библиотек. Я использовал [sse.js](https://github.com/mpetazzoni/sse.js) и JQuery
+
+```html
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script src="jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>Watcher</h1>
+        <div class="container"></div>
+        <script src="sse.js"></script>
+        <script>
+            window.onload = function () {
+                const source = new SSE("http://localhost:8080/subscribe/1");
+                source.addEventListener('message', function (e) {
+                if (e.data) {
+                    const payload = JSON.parse(e.data);
+                    $(".container").append('<p>' + payload.action + '</p>')
+                }});
+                source.stream();
+            };
+        </script>
+    </body>
+</html>
+```

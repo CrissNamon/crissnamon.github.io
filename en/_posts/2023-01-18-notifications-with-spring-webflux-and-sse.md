@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "Notifications with Spring Boot and SSE"
+title:  "Notifications with Spring WebFlux and SSE"
 lang: en
-lang-ref: notifications-with-spring-webflux-and-sse
-date: 2023-01-17 20:00
+lang-ref: spring-webflux-sse
+date: 2023-01-17 08:00
 ---
 
 Sometimes it may be necessary to send real-time data to the user, such as notifications in the Frontend application. To do this, you can use the following simple method using Flux from Project Reactor and ServerSentEvents from Spring.
+<!--more-->
 
 First you need to create a class to store the notification. For simplicity, it will have only two fields: id and message.
 
@@ -27,7 +28,9 @@ public class Notification {
 }
 ```
 
-Next, we will create a service that will manage subscriptions and notifications. We will determine who owns the notification by the user id. We will generate a random id for each notification. Let's limit our Random to the interval [0, 3].
+Next, we will create a service that will manage subscriptions and notifications. We will determine who owns the notification by the user id. 
+
+We will generate a random id for each notification. Let's limit our Random to the interval [0, 3].
 ```java
 private Integer generateId() {
 	return RANDOM.nextInt(4);
@@ -56,7 +59,9 @@ private void generateNotifications(FluxSink<ServerSentEvent<Notification>> sink)
 }
 ```
 
-If we start sending notifications immediately from the generator, we may encounter a timeout problem and a disconnection. Currently, notifications are created every 2 seconds, but in a real system, notifications can be created in minutes or even hours. If no data is sent to an open connection for a certain time (usually a couple of minutes), it will automatically close. To avoid this, let's create a heartbeat - an extra stream of empty comments that will be sent to the open connection to keep it open. Spring itself will take care of closing it and close our heartbeat automatically.
+If we start sending notifications immediately from the generator, we may encounter a timeout problem and a disconnection. Currently, notifications are created every 2 seconds, but in a real system, notifications can be created in minutes or even hours. If no data is sent to an open connection for a certain time (usually a couple of minutes), it will automatically close. 
+
+To avoid this, let's create a heartbeat - an extra stream of empty comments that will be sent to the open connection to keep it open. Spring itself will take care of closing it and close our heartbeat automatically.
 
 ```java
 private <T> Flux keepAlive(Duration duration, Flux<T> data, Integer id) {
@@ -102,7 +107,7 @@ public class NotificationController {
     this.notificationService = notificationService;
   }
 
-  @GetMapping("/subscribe/{id}")
+  @GetMapping(value = "/subscribe/{id}", produces = MediaType.TEXT_EVENT_STREAM_VALUE)
   public Flux<ServerSentEvent<Notification>> subscribe(@PathVariable Integer id) {
     return notificationService.subscribe(id);
   }
@@ -138,4 +143,29 @@ Sent for 3
 Notification flux closed
 ```
 
-You can receive notifications on the Frontend application using the built-in JavaScript tools or using third-party libraries. I use [sse.js](https://github.com/mpetazzoni/sse.js)
+You can receive notifications on the Frontend application using the built-in JavaScript tools or using third-party libraries. I used [sse.js](https://github.com/mpetazzoni/sse.js) and JQuery
+
+```html
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script src="jquery.min.js"></script>
+    </head>
+    <body>
+        <h1>Watcher</h1>
+        <div class="container"></div>
+        <script src="sse.js"></script>
+        <script>
+            window.onload = function () {
+                const source = new SSE("http://localhost:8080/subscribe/1");
+                source.addEventListener('message', function (e) {
+                if (e.data) {
+                    const payload = JSON.parse(e.data);
+                    $(".container").append('<p>' + payload.action + '</p>')
+                }});
+                source.stream();
+            };
+        </script>
+    </body>
+</html>
+```

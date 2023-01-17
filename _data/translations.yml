@@ -4,3 +4,9 @@ blogTitle:
 differentLanguage:
   en: "Read this page in a different language"
   ru: "Читать на другом языке"
+darkColor:
+  en: "Dark mode"
+  ru: "Темная тема"
+lightColor:
+  en: "Light mode"
+  ru: "Светлая тема"
