@@ -39,7 +39,7 @@ The output of this code will be:
 And so how does it work under the hood?
 
 
-![java_reflection.png](:/129e01f4e512460eac52b4399f3d680f)
+![java_reflection.png](https://crissnamon.github.io/assets/img/posts/java-reflection-proxy.png)
 
 
 When we call WebClient.of(BookClient.class) it uses Proxy class to create proxy object of our interface, which will be returned as a result. All method calls to our proxy object will be proxied to our InvocationHandler implementation which will collect information from annotations and send request using standard HttpClient. Response will be parsed from JSON using Gson library and then returned as a result of called method.
