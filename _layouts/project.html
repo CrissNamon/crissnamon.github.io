@@ -31,7 +31,7 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
         <br>💻 GitHub: <a href="{{ page.git | "/"}}">@CrissNamon/{{ page.title | page.name }}</a>
         {% endif %}
 {% if page.maven %}
-<br>Maven: <a href="{{ page.maven }}">Maven</a>
+<br>📁 Maven: <a href="{{ page.maven }}">{{ page.package }}</a>
 {% endif %}
 <br>
 <button id="theme-toggle-light" onclick="modeSwitcher()">{{ site.data.translations['lightColor'][page.lang] }}</button>
