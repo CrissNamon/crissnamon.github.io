@@ -22,13 +22,23 @@ screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
   <body>
     <div class="wrapper">
       <header>
-        <h1><a href="{{ "/" | absolute_url }}">{{ page.title | default: site.github.repository_name }}</a></h1>
+        <h1><a href="{{ "/" | absolute_url }}">HiddenProject</a></h1>
 
         {% if page.logo %}
           <img src="{{ page.logo }}" alt="Logo" />
         {% endif %}
-		
-		{% include {{ page.custom }}.html %}
+        {% if page.git %}
+        <br>💻 GitHub: <a href="{{ page.git | "/"}}">@CrissNamon/{{ page.title | page.name }}</a>
+        {% endif %}
+{% if page.maven %}
+<br>Maven: <a href="{{ page.maven }}">Maven</a>
+{% endif %}
+<br>
+<button id="theme-toggle-light" onclick="modeSwitcher()">{{ site.data.translations['lightColor'][page.lang] }}</button>
+<button id="theme-toggle-dark" onclick="modeSwitcher()">{{ site.data.translations['darkColor'][page.lang] }}</button></p>
+		{% if page.custom %}
+			{% include {{ page.custom }}.html %}
+		{% endif %}
 		
       </header>
       <section>
