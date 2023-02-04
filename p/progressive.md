@@ -1,7 +1,7 @@
 ---
 layout: project
 git: https://github.com/CrissNamon/progressive
-maven: https://central.sonatype.dev/artifact/tech.hiddenproject/progressive/0.6.1/overview
+maven: https://central.sonatype.dev/artifact/tech.hiddenproject/progressive/0.7.11
 package: tech.hiddenproject:progressive
 title: Progressive
 custom: progressive
@@ -32,14 +32,14 @@ Main features:
 <dependency>
     <groupId>tech.hiddenproject</groupId>
   <artifactId>progressive</artifactId>
-  <version>0.6.1</version>
+  <version>0.7.11</version>
 </dependency>
 ```
 
 ##### Gradle
 
 ````groovy
-implementation 'tech.hiddenproject:progressive:0.6.1'
+implementation 'tech.hiddenproject:progressive:0.7.11'
 ````
 
 #### Resources
