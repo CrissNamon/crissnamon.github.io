@@ -65,9 +65,9 @@ WhenConditional.create()
 
 Artifact ids:
 
-- all -> aide-all
-- reflection -> aide-reflection
-- optional -> aide-optional
+- `tech.hiddenproject:aide-all` - all components
+- `tech.hiddenproject:aide-optional` - optionals and conditionals
+- `tech.hiddenproject:aide-reflection` - reflection utils
 
 ### Maven
 
