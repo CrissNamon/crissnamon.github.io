@@ -1,7 +1,7 @@
 ---
 layout: project
 git: https://github.com/CrissNamon/aide
-maven: https://central.sonatype.dev/artifact/tech.hiddenproject/aide/1.1/overview
+maven: https://central.sonatype.dev/artifact/tech.hiddenproject/aide/1.2/overview
 package: tech.hiddenproject:aide
 title: Aide
 custom: aide
@@ -75,14 +75,14 @@ Artifact ids:
 <dependency>
   <groupId>tech.hiddenproject</groupId>
   <artifactId>aide-all</artifactId>
-  <version>1.1</version>
+  <version>1.2</version>
 </dependency>
 ```
 
 ### Gradle
 
 ```groovy
-implementation 'tech:hiddenproject:aide-all:1.1'
+implementation 'tech:hiddenproject:aide-all:1.2'
 ```
 
 ## Resources
@@ -98,7 +98,7 @@ ___
 
 ___
 
-Aide has no dependencies and use only Java 8.</p>
+Aide has no dependencies and use only Java 8.
 
 ## Repository info
 
