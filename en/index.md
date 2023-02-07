@@ -8,14 +8,15 @@ lang:  en
     > Open-source programming and numeric computing platform for math modeling and visualization with fully functional programming language. Includes desktop application and cloud service
 - [Progressive](https://github.com/CrissNamon/progressive)
     > Open source java game framework with usefull tools to create game logic easily. Progressive provides IoC/DI container with auto injection through annotations, state management, game objects, game scripts and much more
-- [SOLDEEA](https://github.com/CrissNamon/soldeea)
-    > Symmetric encryption algorithm based on diophantine equations with java implementation
-- [RUVIK Proto](https://github.com/CrissNamon/ruvik-proto-java)
-    > Custom end-to-end encryption protocol with java implementation
+- [Aide](https://github.com/CrissNamon/aide)
+    > Set of useful utils for fast reflection, extended optionals and conditionals for Java 8+
     
 All these and other projects available on my personal GitHub [@CrissNamon](https://github.com/CrissNamon).
     
 <img src="https://github-readme-stats.vercel.app/api?username=crissnamon&title_color=0074D9&text_color=E5C07B&icon_color=2ECC40&border_color=30363D&bg_color=161B22&show_icons=true&cache_seconds=1800&locale=en&border_radius=5&hide=,issues,&count_private=true&include_all_commit=true"/>
+
+## Publications
+My articles are available in [blog](https://hiddenproject.tech/ru/blog) and [Medium](https://medium.com/@danilarassokhin)
 
 ## Scientific activity
 ORCID: [0000-0002-8835-0376](https://orcid.org/0000-0002-8835-0376)

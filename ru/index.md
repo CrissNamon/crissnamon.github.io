@@ -12,14 +12,14 @@ lang: ru
 - [Progressive](https://github.com/CrissNamon/progressive)
     > open source framework для создания игр
     Реализовано: IoC/DI контейнер для внедрения зависимостей (бинов) через аннотации, варианты бинов (аналог Profiles из Spring), сканирование пакетов на наличие бинов, proxy классы и объекты, модульность систем и компонентов
-- [SOLDEEA](https://github.com/CrissNamon/soldeea)
-    > Алгоритм шифрования на диофантовых уравнениях с реализацией на Java
-- [RUVIK Proto](https://github.com/CrissNamon/ruvik-proto-java)
-    > Протокол сквозного шифрования с реализацией на Java
-    
+- [Aide](https://github.com/CrissNamon/aide)
+    > библиотека для ускорения рефлексии, расширенных Optional и условных операторов в функциональном стиле для Java 8+
 Все проекты доступны на личном GitHub [@CrissNamon](https://github.com/CrissNamon).
     
 <img src="https://github-readme-stats.vercel.app/api?username=crissnamon&title_color=0074D9&text_color=E5C07B&icon_color=2ECC40&border_color=30363D&bg_color=161B22&show_icons=true&cache_seconds=1800&locale=en&border_radius=5&hide=,issues,&count_private=true&include_all_commit=true"/>
+
+## Публикации
+Мои публикации доступны в [блоге](https://hiddenproject.tech/ru/blog) и на [Medium](https://medium.com/@danilarassokhin)
 
 ## Научная деятельность
 ORCID: [0000-0002-8835-0376](https://orcid.org/0000-0002-8835-0376)
