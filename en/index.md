@@ -16,7 +16,7 @@ All these and other projects available on my personal GitHub [@CrissNamon](https
 <img src="https://github-readme-stats.vercel.app/api?username=crissnamon&title_color=0074D9&text_color=E5C07B&icon_color=2ECC40&border_color=30363D&bg_color=161B22&show_icons=true&cache_seconds=1800&locale=en&border_radius=5&hide=,issues,&count_private=true&include_all_commit=true"/>
 
 ## Publications
-My articles are available in [blog](https://hiddenproject.tech/ru/blog) and [Medium](https://medium.com/@danilarassokhin)
+My articles are available in [blog](https://hiddenproject.tech/en/blog) and [Medium](https://medium.com/@danilarassokhin)
 
 ## Scientific activity
 ORCID: [0000-0002-8835-0376](https://orcid.org/0000-0002-8835-0376)

@@ -14,6 +14,7 @@ lang: ru
     Реализовано: IoC/DI контейнер для внедрения зависимостей (бинов) через аннотации, варианты бинов (аналог Profiles из Spring), сканирование пакетов на наличие бинов, proxy классы и объекты, модульность систем и компонентов
 - [Aide](https://github.com/CrissNamon/aide)
     > библиотека для ускорения рефлексии, расширенных Optional и условных операторов в функциональном стиле для Java 8+
+    
 Все проекты доступны на личном GitHub [@CrissNamon](https://github.com/CrissNamon).
     
 <img src="https://github-readme-stats.vercel.app/api?username=crissnamon&title_color=0074D9&text_color=E5C07B&icon_color=2ECC40&border_color=30363D&bg_color=161B22&show_icons=true&cache_seconds=1800&locale=en&border_radius=5&hide=,issues,&count_private=true&include_all_commit=true"/>
