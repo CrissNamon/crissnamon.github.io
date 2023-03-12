@@ -1,3 +1,6 @@
+---
+layout: empty
+---
 ## Мои контакты
 📱 Telegram: [@RassokhinD](https://t.me/RassokhinD)
 <br>📷 Instagram: [@techhiddenproject](https://www.instagram.com/techhiddenproject/)
