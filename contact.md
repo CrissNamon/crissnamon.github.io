@@ -1,5 +1,6 @@
 ---
 layout: empty
+lang: ru
 ---
 ## Мои контакты
 📱 Telegram: [@RassokhinD](https://t.me/RassokhinD)
